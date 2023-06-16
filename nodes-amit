@@ -1,0 +1,197 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Node",
+            "metadata": {
+                "annotations": {
+                    "kubeadm.alpha.kubernetes.io/cri-socket": "unix:///var/run/cri-dockerd.sock",
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                },
+                "creationTimestamp": "2023-06-08T17:10:10Z",
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/os": "linux",
+                    "kubernetes.io/arch": "amd64",
+                    "kubernetes.io/hostname": "docker-desktop",
+                    "kubernetes.io/os": "linux",
+                    "node-role.kubernetes.io/control-plane": "",
+                    "node.kubernetes.io/exclude-from-external-load-balancers": ""
+                },
+                "name": "docker-desktop",
+                "resourceVersion": "1472",
+                "uid": "ac1c5ce4-7553-42e6-ac53-43cbcccd9e7f"
+            },
+            "spec": {},
+            "status": {
+                "addresses": [
+                    {
+                        "address": "192.168.65.4",
+                        "type": "InternalIP"
+                    },
+                    {
+                        "address": "docker-desktop",
+                        "type": "Hostname"
+                    }
+                ],
+                "allocatable": {
+                    "cpu": "12",
+                    "ephemeral-storage": "972991057538",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "7873644Ki",
+                    "pods": "110"
+                },
+                "capacity": {
+                    "cpu": "12",
+                    "ephemeral-storage": "1055762868Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "7976044Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "lastHeartbeatTime": "2023-06-08T17:23:54Z",
+                        "lastTransitionTime": "2023-06-08T17:10:09Z",
+                        "message": "kubelet has sufficient memory available",
+                        "reason": "KubeletHasSufficientMemory",
+                        "status": "False",
+                        "type": "MemoryPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2023-06-08T17:23:54Z",
+                        "lastTransitionTime": "2023-06-08T17:10:09Z",
+                        "message": "kubelet has no disk pressure",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "status": "False",
+                        "type": "DiskPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2023-06-08T17:23:54Z",
+                        "lastTransitionTime": "2023-06-08T17:10:09Z",
+                        "message": "kubelet has sufficient PID available",
+                        "reason": "KubeletHasSufficientPID",
+                        "status": "False",
+                        "type": "PIDPressure"
+                    },
+                    {
+                        "lastHeartbeatTime": "2023-06-08T17:23:54Z",
+                        "lastTransitionTime": "2023-06-08T17:10:41Z",
+                        "message": "kubelet is posting ready status",
+                        "reason": "KubeletReady",
+                        "status": "True",
+                        "type": "Ready"
+                    }
+                ],
+                "daemonEndpoints": {
+                    "kubeletEndpoint": {
+                        "Port": 10250
+                    }
+                },
+                "images": [
+                    {
+                        "names": [
+                            "hubproxy.docker.internal:5555/docker/desktop-kubernetes@sha256:f1573ffb14599a41a50fc9bd6f15c0f4060ed6ade929e9f2c458e5e3cc36cf68",
+                            "hubproxy.docker.internal:5555/docker/desktop-kubernetes:kubernetes-v1.25.9-cni-v1.1.1-critools-v1.25.0-cri-dockerd-v0.2.6-1-debian"
+                        ],
+                        "sizeBytes": 402214060
+                    },
+                    {
+                        "names": [
+                            "registry.k8s.io/etcd:3.5.6-0"
+                        ],
+                        "sizeBytes": 299475478
+                    },
+                    {
+                        "names": [
+                            "registry.k8s.io/kube-apiserver:v1.25.9"
+                        ],
+                        "sizeBytes": 127891182
+                    },
+                    {
+                        "names": [
+                            "registry.k8s.io/kube-controller-manager:v1.25.9"
+                        ],
+                        "sizeBytes": 117234037
+                    },
+                    {
+                        "names": [
+                            "nginx@sha256:f7988fb6c02e0ce69257d9bd9cf37ae20a60f1df7563c3a2a6abe24160306b8d",
+                            "nginx:1.14.2"
+                        ],
+                        "sizeBytes": 109129446
+                    },
+                    {
+                        "names": [
+                            "registry.k8s.io/kube-proxy:v1.25.9"
+                        ],
+                        "sizeBytes": 61716514
+                    },
+                    {
+                        "names": [
+                            "registry.k8s.io/kube-scheduler:v1.25.9"
+                        ],
+                        "sizeBytes": 50714644
+                    },
+                    {
+                        "names": [
+                            "registry.k8s.io/coredns/coredns:v1.9.3"
+                        ],
+                        "sizeBytes": 48803555
+                    },
+                    {
+                        "names": [
+                            "docker/desktop-storage-provisioner:v2.0"
+                        ],
+                        "sizeBytes": 41850220
+                    },
+                    {
+                        "names": [
+                            "nginx@sha256:2e776a66a3556f001aba13431b26e448fe8acba277bf93d2ab1a785571a46d90",
+                            "nginx:alpine"
+                        ],
+                        "sizeBytes": 41403565
+                    },
+                    {
+                        "names": [
+                            "docker/desktop-vpnkit-controller:dc331cb22850be0cdd97c84a9cfecaf44a1afb6e"
+                        ],
+                        "sizeBytes": 36226360
+                    },
+                    {
+                        "names": [
+                            "redis@sha256:1f27b9eb680ffcf6c68966c0d5f578bb1b030ca7cd8ec4e758c429e7f72005a0",
+                            "redis:alpine"
+                        ],
+                        "sizeBytes": 30218018
+                    },
+                    {
+                        "names": [
+                            "registry.k8s.io/pause:3.8"
+                        ],
+                        "sizeBytes": 711184
+                    }
+                ],
+                "nodeInfo": {
+                    "architecture": "amd64",
+                    "bootID": "d74ad2e4-c59c-48c7-9468-0b2610fcbf2a",
+                    "containerRuntimeVersion": "docker://24.0.2",
+                    "kernelVersion": "5.15.90.1-microsoft-standard-WSL2",
+                    "kubeProxyVersion": "v1.25.9",
+                    "kubeletVersion": "v1.25.9",
+                    "machineID": "0f7695fb-4259-4fa3-85af-5d21c7f6ae3a",
+                    "operatingSystem": "linux",
+                    "osImage": "Docker Desktop",
+                    "systemUUID": "0f7695fb-4259-4fa3-85af-5d21c7f6ae3a"
+                }
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

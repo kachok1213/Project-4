@@ -1,0 +1,51 @@
+1.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: webapp
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+
+2.
+kubectl rollout status deployment webapp
+
+3.
+kubectl get replicaset --selector=app=webapp
+
+4.
+kubectl get replicaset --selector=app=webapp -o yaml > replicaset.yaml
+
+5.
+kubectl delete deployment webapp --cascade --wait=true
+
+6.
+kubectl create deploy webapp --image=nginx:1.17.1 --dry-run=client -o yaml > webapp.yaml
+
+7.
+kubectl set image deployment/webapp nginx=nginx:1.17.4
+
+8.
+kubectl rollout history deployment/webapp
+
+9.
+kubectl rollout undo deployment/webapp
+
+10.
+kubectl set image deployment/webapp nginx=nginx:1.100
+kubectl get pods
+kubectl rollout undo deployment/webapp
+kubectl set image deployment/webapp nginx=nginx:latest
+
+13.
+kubectl delete hpa webapp-hpa
